@@ -46,7 +46,17 @@ KVKK gereği bu veriler bu repoya yüklenmemiştir. Bunun yerine:
 - Yıllık/haftalık/günlük mevsimsellikler kapalı — 1 yıldan az veri olduğu için model yanlış pattern çıkarabilir
 - `interval_width=0.80` — %80 güven aralığı
 
+### Keşifsel Veri Analizi
+
+![EDA Grafikleri](results/eda_charts.png)
+
+EDA grafiklerinde görüldüğü gibi, satışlar düzensiz bir profil sergiliyor. Aralık-Ocak döneminde belirgin bir tepe noktası mevcut, sonrasında düşüş eğilimi başlıyor. Haftaların büyük çoğunluğunda satış olmaması, küçük ölçekli e-ticaret mağazaları için tipik bir durum.
+
 ### Sonuçlar
+
+![Tahmin Sonuç Grafiği](results/final_forecast.png)
+
+Yukarıdaki grafikte siyah çizgi gerçek haftalık ciroyu, kırmızı kesikli çizgi ise modelin önümüzdeki 4 hafta için tahminini gösteriyor. Açık kırmızı alan %80 güven aralığını temsil ediyor. Sağ eksende TL karşılığı yaklaşık adet bilgisi yer alıyor.
 
 ```
 Veri:
@@ -141,7 +151,17 @@ Among the three suggested models (ARIMA, Prophet, XGBoost), I chose Prophet. Rea
 - Yearly/weekly/daily seasonalities disabled — with less than a year of data, the model could pick up false patterns
 - `interval_width=0.80` — 80% confidence interval
 
+### Exploratory Data Analysis
+
+![EDA Charts](results/eda_charts.png)
+
+As shown in the EDA charts, sales follow an irregular pattern. There is a noticeable peak in the December-January period, followed by a downward trend. The fact that most weeks have no sales is typical for small-scale e-commerce stores.
+
 ### Results
+
+![Forecast Result Plot](results/final_forecast.png)
+
+In the chart above, the black line shows actual weekly revenue, while the red dashed line shows the model's forecast for the next 4 weeks. The light red shaded area represents the 80% confidence interval. The right axis displays the approximate unit equivalent.
 
 ```
 Data:
